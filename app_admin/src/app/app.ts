@@ -1,0 +1,14 @@
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { TripListingComponent } from './trip-listing/trip-listing';
+
+@Component({
+  selector: 'app-root',
+  imports: [ TripListingComponent, RouterOutlet],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+export class App {
+  protected title = 'Travlr Getaways Admin!';
+
+}

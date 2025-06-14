@@ -3,10 +3,15 @@ const router = express.Router();     // Router logic
 const tripsController = require('../controllers/trips'); // Import the controller
 
 // Define route for trips endpoint
-router.route('/trips').get(tripsController.tripsList);  // GET Method routes tripList
+router
+  .route('/trips')
+  .get(tripsController.tripsList)  // GET Method routes tripList
+  .post(tripsController.tripsAddTrip); // POST Method Adds a Trip
 
 // GET Method routes tripsFindByCode - requires parameter
-router.route('/trips/:tripCode') 
-    .get(tripsController.tripsFindByCode);
+router
+  .route('/trips/:tripCode')
+  .get(tripsController.tripsFindByCode)  // GET Method for finding a trip by code
+  .put(tripsController.tripsUpdateTrip); // PUT Method for updating a trip
 
 module.exports = router;
