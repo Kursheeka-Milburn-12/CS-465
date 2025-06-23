@@ -1,53 +1,59 @@
 # Travlr Getaways - Full Stack Web Application
 
-**Course**: CS 465 - Full Stack Development  
-**Project**: Final Iteration with Admin Login & Security  
-**Author**: Kursheeka Milburn 
-**Date**: June 2025
-
-## 📐 Architecture
-
-For the frontend, I implemented a Single-Page Application (SPA) using **Angular** to provide dynamic, client-side routing and a smooth user experience. Angular components like `trip-list`, `add-trip`, and `edit-trip` were rendered conditionally using the router-outlet system. This allowed modular, scalable navigation with minimal page reloads.
-
-Earlier iterations used static **Express HTML templates** and server-side rendering, but this was replaced as Angular took over for better performance and maintainability. JavaScript played a key role in both environments, JavaScript was foundational in understanding DOM manipulation, while TypeScript (used in Angular) enhanced structure and error checking.
-
-The backend used a **NoSQL MongoDB database**, which allowed flexible document-based storage. This was ideal for storing trip objects with nested fields like `description`, `image`, `start`, etc. Its schema-less nature worked well for rapid development, and it integrated smoothly with Mongoose, enabling CRUD operations without rigid table structures.
+**Title:** 8-1 Journal: Portfolio  
+**Name:** Kursheeka Milburn  
+**Instructor:** Jerome DiMarzio  
+**Course:** CS-360-10986-M01 Mobile Architect & Programming  
+**Date:** June 29, 2025  
 
 ---
 
-## ⚙️ Functionality
+## Architecture
 
-**JSON** (JavaScript Object Notation) differs from **JavaScript** in that it is a lightweight data-interchange format that is language-independent. While JavaScript is a full-fledged programming language, JSON is used to structure and transmit data. In my project, JSON served as the bridge between the frontend and backend, data was retrieved from the Express API as JSON and rendered in Angular components.
+For this project, I worked on the frontend and backend of a full stack web application. The frontend started with Express HTML and JavaScript, which were used to render basic static and server-driven pages. Later, I moved to Angular and built a single-page application (SPA). This gave the app a more dynamic and interactive experience for users. The Angular router made it easier to switch between views like trip listing, add trip, and edit trip without reloading the page.
 
-Throughout development, I **refactored** several parts of the codebase to improve efficiency. For example:
-- I abstracted API calls into a `TripDataService` to centralize HTTP operations.
-- I reused form components across both `add-trip` and `edit-trip` features.
-- I modularized logic into Angular services and interceptors, reducing duplication and enhancing testability.
-
-Reusable UI components like the `trip-card` and `navbar` minimized development time and helped maintain a consistent look and feel across the application.
+The backend used a NoSQL database, MongoDB. This choice was made because:
+- MongoDB stores data in a flexible, JSON-like format.
+- It works well with JavaScript and Node.js.
+- It makes it easy to scale the app and manage collections of trip data without needing strict table structures like in SQL.
 
 ---
 
-## 🧪 Testing
+## Functionality
 
-I extensively tested API endpoints using **Postman** to validate both GET and POST/PUT/DELETE operations. During development, testing became more complex once **authentication and security layers** were added.
+JSON (JavaScript Object Notation) is different from JavaScript itself. It’s just a way to store and format data. I used JSON to send and receive data between the frontend Angular components and the backend Express API. For example, when a user adds or edits a trip, that data is sent as JSON to the backend, and the response is also in JSON format.
 
-The app uses **JWT (JSON Web Tokens)** for authentication. Upon login, a token is generated and stored on the client side. To ensure secure communication:
-- I implemented an Angular **JWT interceptor** that appends the token to protected backend requests.
-- On the backend, Express verifies tokens using Passport and a custom JWT strategy.
-- I validated protected routes like `addTrip` and `updateTrip` to ensure that only authenticated users could access them.
+Throughout development, I refactored several parts of the code:
+- I created reusable components like trip cards, which display each trip’s details.
+- I used services like TripDataService to centralize HTTP requests.
+- Reusable UI components made the app easier to manage, saved time, and reduced bugs.
 
-Understanding **HTTP methods** (GET, POST, PUT, DELETE) and **endpoint routing** was essential in building RESTful APIs that handled both data retrieval and secure mutation logic.
+This helped make the app more organized and easier to maintain.
 
 ---
 
-## 💭 Reflection
+## Testing
 
-This course has significantly contributed to my professional development. I have gained real-world, job-ready skills in:
-- Designing and developing full-stack applications using the **MEAN stack (MongoDB, Express, Angular, Node.js)**
-- Implementing **secure authentication** with Passport, JWT, and crypto
-- Using **Postman and MongoDB Compass** for backend testing and debugging
-- Managing projects and branches with **Git and GitHub**
+To test the API endpoints, I used Postman. I tested:
+- GET requests to check if trip data loaded correctly.
+- POST requests to add a new trip.
+- PUT requests to update trip data.
 
-Through this project, I’ve improved my ability to structure scalable web apps and secure them properly. I’ve also learned how to bridge frontend and backend technologies through RESTful APIs and shared data models. These skills directly support my goal of moving into a technical role and make me a much stronger, more marketable candidate in the web development and IT field.
+After adding user authentication, I had to make sure that only logged-in users could access protected actions like adding or editing trips. This involved testing security features, including the use of JWTs (JSON Web Tokens).
 
+To handle these secure requests in Angular, I created a JWT interceptor. This automatically attached the token to every HTTP request going to the backend. It made the app more secure and avoided writing extra code in every API call.
+
+---
+
+## Reflection
+
+This course taught me a lot about how full stack applications work. I learned how to build both the frontend and backend and connect them smoothly. I also learned how to:
+- Set up Angular routing and forms
+- Connect to a MongoDB database
+- Create and secure RESTful APIs
+- Implement login/logout functionality
+- Use JWT tokens to protect routes and data
+
+These skills are very useful in the real world and will help me in my future career. I now feel more confident working with modern web technologies and developing complete applications on my own.
+
+This project gave me real hands-on experience that I can show to future employers in my portfolio.
