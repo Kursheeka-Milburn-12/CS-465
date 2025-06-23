@@ -1,6 +1,6 @@
-# Travlr Getaways – Full Stack Web Application
+# Travlr Getaways - Full Stack Web Application
 
-**Course**: CS 465 – Full Stack Development  
+**Course**: CS 465 - Full Stack Development  
 **Project**: Final Iteration with Admin Login & Security  
 **Author**: Kursheeka Milburn
 **Date**: June 2025
@@ -51,11 +51,3 @@ This course has significantly contributed to my professional development. I have
 
 Through this project, I’ve improved my ability to structure scalable web apps and secure them properly. I’ve also learned how to bridge frontend and backend technologies through RESTful APIs and shared data models. These skills directly support my goal of moving into a technical role and make me a much stronger, more marketable candidate in the web development and IT field.
 
----
-
-## 🔗 GitHub Repository
-
-> [Insert Your Repository Link Here]  
-> Be sure your instructor is added as a collaborator and has accepted the invite.
-
----
