@@ -2,7 +2,7 @@
 
 **Course**: CS 465 - Full Stack Development  
 **Project**: Final Iteration with Admin Login & Security  
-**Author**: Kursheeka Milburn
+**Author**: Kursheeka Milburn 
 **Date**: June 2025
 
 ## 📐 Architecture
