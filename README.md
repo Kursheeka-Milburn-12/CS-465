@@ -9,7 +9,7 @@
 
 For the frontend, I implemented a Single-Page Application (SPA) using **Angular** to provide dynamic, client-side routing and a smooth user experience. Angular components like `trip-list`, `add-trip`, and `edit-trip` were rendered conditionally using the router-outlet system. This allowed modular, scalable navigation with minimal page reloads.
 
-Earlier iterations used static **Express HTML templates** and server-side rendering, but this was replaced as Angular took over for better performance and maintainability. JavaScript played a key role in both environments—vanilla JavaScript was foundational in understanding DOM manipulation, while TypeScript (used in Angular) enhanced structure and error checking.
+Earlier iterations used static **Express HTML templates** and server-side rendering, but this was replaced as Angular took over for better performance and maintainability. JavaScript played a key role in both environments, JavaScript was foundational in understanding DOM manipulation, while TypeScript (used in Angular) enhanced structure and error checking.
 
 The backend used a **NoSQL MongoDB database**, which allowed flexible document-based storage. This was ideal for storing trip objects with nested fields like `description`, `image`, `start`, etc. Its schema-less nature worked well for rapid development, and it integrated smoothly with Mongoose, enabling CRUD operations without rigid table structures.
 
@@ -17,7 +17,7 @@ The backend used a **NoSQL MongoDB database**, which allowed flexible document-b
 
 ## ⚙️ Functionality
 
-**JSON** (JavaScript Object Notation) differs from **JavaScript** in that it is a lightweight data-interchange format that is language-independent. While JavaScript is a full-fledged programming language, JSON is used to structure and transmit data. In my project, JSON served as the bridge between the frontend and backend—data was retrieved from the Express API as JSON and rendered in Angular components.
+**JSON** (JavaScript Object Notation) differs from **JavaScript** in that it is a lightweight data-interchange format that is language-independent. While JavaScript is a full-fledged programming language, JSON is used to structure and transmit data. In my project, JSON served as the bridge between the frontend and backend, data was retrieved from the Express API as JSON and rendered in Angular components.
 
 Throughout development, I **refactored** several parts of the codebase to improve efficiency. For example:
 - I abstracted API calls into a `TripDataService` to centralize HTTP operations.
